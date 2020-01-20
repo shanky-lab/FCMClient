@@ -15,7 +15,7 @@ public interface FCMService {
 	@POST("send")
 	@Headers(value = { "Content-Type:application/json" })
 	public Call<PushNotificationResponse> sendMulticast(@Header("Authorization") String serverKey, @Body MulticastMessage message);
-	
+
 	@POST("send")
 	@Headers(value = { "Content-Type:application/json" })
 	public Call<PushNotificationResponse> sendUnicast(@Header("Authorization") String serverKey, @Body Message message);
